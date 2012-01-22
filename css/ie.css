@@ -1,0 +1,20 @@
+body {
+	text-align: center;
+	}
+#wrapper {
+	text-align: left;
+	}
+.sigil {
+	position: absolute;
+	}
+.overlay #stage li + li {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=33)"!important;
+	filter: alpha(opacity=33)!important;
+	}
+.column #stage li {
+	position: relative;
+	}
+.column #stage li + li {
+	}
+.column #stage li + li + li {
+	}

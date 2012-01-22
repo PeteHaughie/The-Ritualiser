@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="768" width="1024">
+	<mask id="polygon">
+		<clipPath id="left">
+			<polygon points="180.771,576.311 512.567,383.671 512.567,0 291.157,0 69.58,383.699 "/>
+		</clipPath>
+		<clipPath id="right">
+			<polygon id="right" points="844.365,576.311 512.569,383.671 512.569,0 733.979,0 955.557,383.699 "/>
+		</clipPath>
+		<clipPath id="bottom">
+			<polygon id="bottom" points="844.383,576.297 512.571,383.672 180.664,576.297 291.321,768 733.695,768 "/>
+		</clipPath>
+	</mask>
+</svg>

@@ -1,0 +1,186 @@
+body {
+	background: black;
+	}
+#wrapper {
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+	position: relative;	
+	overflow: hidden;
+	}
+	.loaded #wrapper {
+		display: none;
+		}
+	.overlay #wrapper {
+		margin-top: -10px;
+		padding-top: 10px;
+		}
+#stage {
+	margin: 0;
+	}
+.sigil {
+	width: 80px;
+	height: 80px;
+	position: relative;
+	z-index: 6;
+	cursor: pointer;
+	display: block;
+	}
+	.sigil span {
+		position: absolute;
+		background: url(../images/runes.png) 0 0 no-repeat transparent;
+		height: 80px;
+		width: 80px;
+		text-indent: -10000em;
+		}
+	.sigil .rune_1 {
+		background-position: -10px -10px;
+		}
+	.sigil .rune_2 {
+		background-position: -110px -10px;
+		}
+	.sigil .rune_3 {
+		background-position: -210px -10px;
+		}
+	.sigil .rune_4 {
+		background-position: -10px -110px;
+		}
+	.sigil .rune_5 {
+		background-position: -110px -110px;
+		}
+	.sigil .rune_6 {
+		background-position: -210px -110px;
+		}
+	.sigil .rune_7 {
+		background-position: -10px -210px;
+		}
+	.sigil .rune_8 {
+		background-position: -110px -210px;
+		}
+	.sigil .rune_9 {
+		background-position: -210px -210px;
+		}
+	.sigil .rune_10 {
+		background-position: -10px -310px;
+		}
+	.sigil .rune_11 {
+		background-position: -110px -310px;
+		}
+	.sigil .rune_12 {
+		background-position: -210px -310px;
+		}
+	.sigil .rune_13 {
+		background-position: -10px -410px;
+		}
+	.sigil .rune_14 {
+		background-position: -110px -410px;
+		}
+	.sigil .rune_15 {
+		background-position: -210px -410px;
+		}
+	.sigil .rune_16 {
+		background-position: -10px -510px;
+		}
+	.sigil .rune_17 {
+		background-position: -110px -510px;
+		}
+	.sigil .rune_18 {
+		background-position: -210px -510px;
+		}
+/* overlay style */
+#stage li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	}
+.overlay .sigil {
+	margin: 10px 0 0 10px;
+	}
+	.overlay #stage li {
+		z-index: 1;
+		}
+	.overlay #stage li + li {
+		z-index: 2;
+		opacity: .3;
+		}
+	 	#stage li + li + li {
+		z-index: 3;
+		}
+/* column style */
+.column .sigil {
+	float: left;
+	margin: 10px 250px 0 10px;
+	}
+.column #stage li {
+	left: 0;
+	width: 341px;
+	}
+	.column #stage li + li {
+		left: 341px;
+		}
+		.column #stage li + li + li {
+			left: 682px;
+			}
+			.column #stage img {
+				position: relative;
+				}
+			.column #stage .left img {
+				left: 0;
+				}
+			.column #stage .centre img {
+				left: -341px;
+				}
+			.column #stage .right img {
+				left: -683px;
+				}
+/* polygon */
+.hexagon #wrapper > object {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	}
+	.hexagon #stage > li {
+		left: 0;
+		top: 0;
+		background: red;
+		-webkit-mask: url(../images/hexagon-left.svg);
+		clip-path: url(../images/hexagon.svg#left);
+		}
+	.hexagon #stage li + li {
+		-webkit-mask: url(../images/hexagon-right.svg);
+		clip-path: url(../images/hexagon.svg#right);
+		}
+	.hexagon #stage li + li + li {
+		-webkit-mask: url(../images/hexagon-bottom.svg);
+		clip-path: url(../images/hexagon.svg#bottom);
+		}
+.hexagon .sigil {
+	position: absolute;
+	left: 400px;
+	right: auto;
+	top: 300px;
+	}
+	.hexagon .sigil + .sigil {
+		left: auto;
+		right: 400px;
+		top: 300px;
+		}
+		.hexagon .sigil + .sigil + .sigil {
+			right: auto;
+			left: 475px;
+			top: 430px;
+			}
+
+	
+#stage li span {
+	display: none;
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 5;
+	}
